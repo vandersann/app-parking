@@ -1,5 +1,5 @@
 <template>
-  <div class="cadastro">
+  <main>
     <h1>Cadastro de Veículos</h1>
-  </div>
+  </main>
 </template>

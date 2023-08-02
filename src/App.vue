@@ -1,7 +1,8 @@
 <template>
-  <Navebar />
+  <Navebar :logo="logo_src" :alt="app_name" />
   <router-view/>
   <Footer />
+
 </template>
 
 <script>
@@ -11,30 +12,41 @@ import Footer from './components/Footer.vue';
 export default {
   components: {
     Navebar,
-    Footer
+    Footer,
+  },
+  data() {
+    return{
+      logo_src: "/img/icon.png",
+      app_name: "Cadastre o Veículo"
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-nav {
-  padding: 30px;
-}
+  main {
+    margin-top: 20px;
+    min-height: 100%;
+    display: block;
+    min-height: 100vh;
+    min-height: -webkit-calc(100vh - 100px);
+    min-height: -moz-calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+    position: relative;
+    width: 100%;
+  }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #0771BC;
-}
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #222;
+  }
 </style>

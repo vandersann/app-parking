@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p> Parking teste 2023 </p>
+        <p> Parking Sandino 2023 &copy; </p>
     </footer>
 </template>
 
@@ -11,5 +11,13 @@
 </script>
 
 <style>
-
+    footer {
+        height: 100px;
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 </style>
