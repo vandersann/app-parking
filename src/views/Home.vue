@@ -1,7 +1,7 @@
 <template>
   <main>
+    <div class="bg"></div>
     <h1> Cadastrar Veículos </h1>
-
     <CarForm />
   </main>
 </template>
