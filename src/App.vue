@@ -1,5 +1,5 @@
 <template>
-  <Navebar :logo="logo_src" :alt="app_name" />
+  <Navebar :logo="logo_src" :alt="app_name" :gif="gif_src" />
   <router-view/>
   <Footer />
 
@@ -17,7 +17,8 @@ export default {
   data() {
     return{
       logo_src: "/img/icon.png",
-      app_name: "Cadastre o Veículo"
+      app_name: "Cadastre o Veículo",
+      gif_src: "/img/car.gif"
     }
   }
 }
@@ -60,7 +61,7 @@ export default {
     right: 0;
     background: url('/public/img/background.jpg') top right, center no-repeat fixed ;
     background-size: cover;
-    opacity: .3;
+    opacity: .2;
       width: 100%;
       height: 100%;
   }
@@ -71,5 +72,6 @@ export default {
     font-size: 3rem;
     margin-bottom: 3rem;
     color: #222;
+    padding-top: 1rem;
   }
 </style>

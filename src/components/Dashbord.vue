@@ -45,7 +45,7 @@
                     <option :value="statu.tipo" v-for="statu in status" :key="statu.id" :selected="carro.status == statu.tipo"> {{ statu.tipo }} </option>
                 </select>
 
-                <button class="delete-btn" @click="deletarCarro(carro.id)"> Deletar <i class='bx bx-x-circle'></i></button>
+                <button class="delete-btn" @click="deletarCarro(carro.id)"> Deletar <i class='bx bx-x'></i></button>
 
             </div>
 
@@ -194,7 +194,7 @@
     #table-car-heading{
         font-weight: bold;
         padding: 1.2rem;
-        border-bottom: 0.3rem solid rgba(53,30,180);
+        border-bottom: 0.3rem solid #000;
     }
 
     #table-car-heading div,
@@ -205,7 +205,7 @@
     .table-car-row {
         width: 100%;
         padding: 1.2rem;
-        border-bottom: 1px solid rgba(53,30,180);
+        border-bottom: .1rem solid #000;
 
     }
 
@@ -230,11 +230,14 @@
         color: #AE354C;
         background-color: #fff;
         cursor: pointer;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         width: 75%;
         height: 2rem;
         border: 2px solid #AE354C;
+        border-radius:.4rem;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
         transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
     }
@@ -260,6 +263,11 @@
         color: #000 !important;
         background: #AE354C;
         transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+
+    .delete-btn i{
+        margin-left: .2rem;
+        font-size: 1.2rem;
     }
 
 </style>

@@ -1,12 +1,12 @@
 <template>
     <nav>
-
+        <figure class="gif" >
+            <img src="/public/img/car.gif">
+        </figure>
         <router-link  to="/" id="logo-url">
 
             <img :src="logo" :alt="alt" id="logo">
-
         </router-link>
-
         <router-link to="/">Home</router-link>
         <router-link to="/cadastro">Cadastro</router-link>
     </nav>
@@ -23,6 +23,13 @@
 </script>
 
 <style scoped>
+
+    .gif{
+        text-align: center;
+        padding: 15px;
+        background-color: black;
+        width: 10rem;
+    }
 
     nav{
         background-color: #1E88E5;
@@ -44,15 +51,16 @@
 
     nav a{
         color: #FFF;
+        padding: .2rem;
         text-decoration: none;
         margin: 12px;
         transition: .5s;
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 
     nav a:hover{
-        color: red;
-        border-bottom: 2px solid red;
+        opacity: 1;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     }
 
 </style>

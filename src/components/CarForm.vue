@@ -5,35 +5,36 @@
 
         <form id="carro-form" @submit="createCarro">
             <div class="input-container">
-                <label for="nome">Nome do Cliente: </label>
-                <input type="text" id="nome" v-model="nome" placeholder="Insira seu nome">
+                <label for="nome">Nome do Cliente </label>
+                <input type="text" id="nome" v-model="nome" placeholder="Seu nome">
             </div>
             <div class="input-container">
-                <label for="fabricante">Fabricante: </label>
-                <input type="text" id="fabricante" v-model="fabricante" placeholder="Insira o fabricante do veículo">
+                <label for="fabricante">Fabricante </label>
+                <input type="text" id="fabricante" v-model="fabricante" placeholder="Fabricante do veículo">
             </div>
             <div class="input-container">
-                <label for="modelo">Modelo do Carro: </label>
-                <input type="text" id="modelo" v-model="modelo" placeholder="Insira o modelo do veículo">
+                <label for="modelo">Modelo do Carro </label>
+                <input type="text" id="modelo" v-model="modelo" placeholder="Modelo do veículo">
             </div>
             <div class="input-container">
-                <label for="cor">Cor do Carro: </label>
-                <input type="text" id="cor" v-model="cor" placeholder="Insira a cor do veículo">
+                <label for="cor">Cor do Carro </label>
+                <input type="text" id="cor" v-model="cor" placeholder="Cor do veículo">
             </div>
             <div class="input-container">
-                <label for="ano">Ano de Fabricação: </label>
-                <input type="text" id="ano" v-model="ano" placeholder="Insira o ano de fabricação">
+                <label for="ano">Ano de Fabricação </label>
+                <input type="text" id="ano" v-model="ano" placeholder="Ano de fabricação">
             </div>
             <div class="input-container">
-                <label for="placa">Placa do Carro: </label>
-                <input type="text" id="placa" v-model="placa" placeholder="Insira a placa do veículo">
+                <label for="placa">Placa do Carro </label>
+                <input type="text" id="placa" v-model="placa" placeholder="Placa do veículo">
             </div>
             <div class="input-container">
                 <label for="hora">Hórario de Entrada </label>
                 <input type="time" id="hora" v-model="hora" placeholder="Informe o hórario de entrada">
             </div>
-            <div class="input-container">
-                <input type="submit" class="submit-btn" value="Cadastrar">
+            <div class="input-container btn">
+                <button class="submit-btn" value="Cadastrar">Cadastrar</button>
+
             </div>
         </form>
     </div>
@@ -113,14 +114,17 @@
 <style scoped>
 
     #carro-form {
-        max-width: 300px;
+        max-width: 420px;
         margin: 0 auto;
     }
 
     .input-container {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 25px;
+        flex-direction: row;
+        margin-bottom: 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     label {
@@ -128,28 +132,62 @@
         margin-bottom: 10px;
         color: black;
         padding: 5px 10px;
-        border-left: 4px solid #3f7fbf;
     }
 
     input {
-        padding: 5px 10px;
+        padding: 8px 20px;
         widows: 300px;
+        font-size: 1rem;
     }
 
-    .submit-btn {
-        background-color: #3f7fbf;
-        color: white;
-        font-weight:bold;
-        padding: 10px;
-        font-size: 16px;
-        border: 2px solid white;
+    .input-container.btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        text-transform: capitalize;
+    }
+
+    .input-container.btn .submit-btn {
+        color: #1E88E5;
+        font-size: 1.2rem;
+        background-color: #fff;
         cursor: pointer;
-        transition: .5s;
+        position: relative;
+        width: 50%;
+        height: 2.4rem;
+        border: 2px solid #1E88E5;
+        border-radius: .4rem;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+    .input-container .submit-btn:hover {
+        color: #fff !important;
+        background-color: transparent;
+        text-shadow: nthree;
+    }
+    .input-container .submit-btn:hover::before {
+        left: 0%;
+        right: auto;
+        width: 100%;
+    }
+    .input-container .submit-btn::before {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 0px;
+        z-index: -1;
+        content: '';
+        color: #000 !important;
+        background: #1E88E5;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
     }
 
-    .submit-btn:hover{
-        background-color:black;
-        font-size: 18px;
+    .delete-btn i{
+        margin-left: .2rem;
+        font-size: 1.2rem;
     }
 
 </style>
