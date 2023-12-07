@@ -12,11 +12,11 @@
 
                 <div class="order-id"># </div>
                 <div>Nome do Cliente </div>
-                <div>Marca do Veículo </div>
-                <div>Modelo do Veículo </div>
-                <div>Cor do Veículo </div>
-                <div>Ano do Veículo </div>
-                <div>Placa do Veículo </div>
+                <div>Fabricante</div>
+                <div>Modelo</div>
+                <div>Cor</div>
+                <div>Ano</div>
+                <div>Placa</div>
                 <div>Hora da Entrada </div>
                 <div>Ações </div>
 
@@ -31,7 +31,7 @@
 
                 <div class="order-number">{{ carro.id }}</div>
                 <div>{{ carro.nome }} </div>
-                <div>{{ carro.marca }}</div>
+                <div>{{ carro.fabricante }}</div>
                 <div>{{ carro.modelo }}</div>
                 <div>{{ carro.cor }}</div>
                 <div>{{ carro.ano }}</div>
@@ -41,11 +41,11 @@
             <div>
 
                 <select name="status" class="status"  @change="updateCarro($event, carro.id)">
-                    <option value="">Status Carro </option>
+                    <option value="statu.id">Status Carro </option>
                     <option :value="statu.tipo" v-for="statu in status" :key="statu.id" :selected="carro.status == statu.tipo"> {{ statu.tipo }} </option>
                 </select>
 
-                <button class="delete-btn" @click="deletarCarro(carro.id)"> Deletar</button>
+                <button class="delete-btn" @click="deletarCarro(carro.id)"> Deletar <i class='bx bx-x-circle'></i></button>
 
             </div>
 
@@ -74,11 +74,11 @@
             }
         },
 
-        // compkent mensagem
+        // component mensagem
 
         components : {
 
-            Mensagem
+            Mensagem,
         },
 
         // Carregar os Carros
@@ -186,12 +186,15 @@
     .table-car-row {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.2rem;
     }
 
     #table-car-heading{
         font-weight: bold;
-        padding: 12px;
-        border-bottom: 3px solid rgba(53,30,180);
+        padding: 1.2rem;
+        border-bottom: 0.3rem solid rgba(53,30,180);
     }
 
     #table-car-heading div,
@@ -201,7 +204,7 @@
 
     .table-car-row {
         width: 100%;
-        padding: 12px;
+        padding: 1.2rem;
         border-bottom: 1px solid rgba(53,30,180);
 
     }
@@ -211,27 +214,52 @@
         width: 5%;
     }
 
+    .status {
+        height: 2rem;
+        margin-bottom: .4rem;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
 
-    select {
-        padding:  10px 6px;
-        margin-right:  10px;
+    .status select {
+        padding:  .8rem .6rem;
+        margin-right: 1rem;
         width: 50%;
     }
 
     .delete-btn {
-        background-color: #3F7FBF;
-        color: white;
-        font-weight:  bold;
-        padding: 10px;
-        font-size: 14px;
-        border: 2px solid white;
+        color: #AE354C;
+        background-color: #fff;
         cursor: pointer;
-        transition:  .5s;
+        display: block;
+        position: relative;
+        width: 75%;
+        height: 2rem;
+        border: 2px solid #AE354C;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
     }
-
     .delete-btn:hover {
-        background-color: tomato;
-        font-size: 10px;
+        color: #fff !important;
+        background-color: transparent;
+        text-shadow: nthree;
+    }
+    .delete-btn:hover:before {
+        left: 0%;
+        right: auto;
+        width: 100%;
+    }
+    .delete-btn:before {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        height: 100%;
+        width: 0px;
+        z-index: -1;
+        content: '';
+        color: #000 !important;
+        background: #AE354C;
+        transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
     }
 
 </style>

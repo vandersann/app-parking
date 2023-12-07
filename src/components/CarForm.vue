@@ -9,8 +9,8 @@
                 <input type="text" id="nome" v-model="nome" placeholder="Insira seu nome">
             </div>
             <div class="input-container">
-                <label for="marca">Marca do Carro: </label>
-                <input type="text" id="marca" v-model="marca" placeholder="Insira a marca do veículo">
+                <label for="fabricante">Fabricante: </label>
+                <input type="text" id="fabricante" v-model="fabricante" placeholder="Insira o fabricante do veículo">
             </div>
             <div class="input-container">
                 <label for="modelo">Modelo do Carro: </label>
@@ -53,7 +53,7 @@
         data() {
             return {
                 nome: null,
-                marca: null,
+                fabricante: null,
                 modelo: null,
                 cor: null,
                 ano: null,
@@ -69,7 +69,7 @@
 
                 const data = {
                     nome: this.nome,
-                    marca: this.marca,
+                    fabricante: this.fabricante,
                     modelo: this.modelo,
                     cor: this.cor,
                     ano: this.ano,
@@ -98,7 +98,7 @@
 
                 // Limpar campos
                 this.nome = "";
-                this.marca = "";
+                this.fabricante = "";
                 this.modelo = "";
                 this.cor = "";
                 this.ano = "";

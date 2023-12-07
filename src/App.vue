@@ -24,15 +24,22 @@ export default {
 </script>
 
 <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
   * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 62,5%;
+  }
+
   main {
-    margin-top: 20px;
+    margin-top: 1rem;
     min-height: 100%;
     display: block;
     min-height: 100vh;
@@ -41,6 +48,7 @@ export default {
     min-height: calc(100vh - 100px);
     position: relative;
     width: 100%;
+    scroll-behavior: smooth;
   }
 
   main .bg {
@@ -60,8 +68,8 @@ export default {
 
   h1 {
     text-align: center;
-    font-size: 42px;
-    margin-bottom: 30px;
+    font-size: 3rem;
+    margin-bottom: 3rem;
     color: #222;
   }
 </style>

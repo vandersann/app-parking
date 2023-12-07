@@ -48,7 +48,6 @@
         margin: 12px;
         transition: .5s;
         font-size: 20px;
-        font-family: Arial, Helvetica, sans-serif;
     }
 
     nav a:hover{
