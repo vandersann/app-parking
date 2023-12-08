@@ -1,6 +1,7 @@
 <template>
     <footer>
-        <p> Parking Sandino 2023 &copy; </p>
+        <img src="/public/img/logo.png">
+        <p> &copy; 2023 - Todos os Direitos Reservados. </p>
     </footer>
 </template>
 

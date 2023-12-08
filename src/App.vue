@@ -1,5 +1,5 @@
 <template>
-  <Navebar :logo="logo_src" :alt="app_name" :gif="gif_src" />
+  <Navebar :logo="logo_src" :alt="app_name"/>
   <router-view/>
   <Footer />
 
@@ -16,9 +16,8 @@ export default {
   },
   data() {
     return{
-      logo_src: "/img/icon.png",
+      logo_src: "/public/img/icon-p.png",
       app_name: "Cadastre o Veículo",
-      gif_src: "/img/car.gif"
     }
   }
 }

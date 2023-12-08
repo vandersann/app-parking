@@ -1,10 +1,6 @@
 <template>
     <nav>
-        <figure class="gif" >
-            <img src="/public/img/car.gif">
-        </figure>
         <router-link  to="/" id="logo-url">
-
             <img :src="logo" :alt="alt" id="logo">
         </router-link>
         <router-link to="/">Home</router-link>
@@ -23,13 +19,6 @@
 </script>
 
 <style scoped>
-
-    .gif{
-        text-align: center;
-        padding: 15px;
-        background-color: black;
-        width: 10rem;
-    }
 
     nav{
         background-color: #1E88E5;
