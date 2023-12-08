@@ -1,8 +1,8 @@
 <template>
     <nav>
-        <router-link  to="/" id="logo-url">
-            <img :src="logo" :alt="alt" id="logo">
-        </router-link>
+        <div class="teste" ></div>
+
+
         <router-link to="/">Home</router-link>
         <router-link to="/cadastro">Cadastro</router-link>
     </nav>
@@ -19,6 +19,13 @@
 </script>
 
 <style scoped>
+
+
+    .teste{
+        width: 20%;
+        background-image: url();
+    }
+
 
     nav{
         background-color: #1E88E5;
