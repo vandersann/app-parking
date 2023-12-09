@@ -1,16 +1,13 @@
 <template>
     <footer>
-        <img src="/public/img/logo.png">
-
-        <router-link  to="/" id="logo-url">
-            <img src="/public/img/logo.png" alt="">
-        </router-link>
+        <img src="../assets/logo.png">
 
         <ul>
             <li>
-                <a href="#"><i class='bx bxl-linkedin-square' style='color:#f5f4f4'  ></i></a>
-                <a href="#"><i class='bx bxl-instagram-alt' style='color:#f5f4f4' ></i></a>
-                <a href="#"><i class='bx bxl-github' style='color:#f5f4f4' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square' target='_blank' style='color:#f5f4f4' ></i></a>
+                <a href="#"><i class='bx bxl-whatsapp' target='_blank' style='color:#f5f4f4' ></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5581996430492&text=Ol%C3%A1,%20acessei%20link%20pelo%20seu%20portif%C3%B3lio." target='_blank'><i class='bx bxl-instagram-alt' style='color:#f5f4f4' ></i></a>
+                <a href="#"><i class='bx bxl-github' target='_blank' style='color:#f5f4f4' ></i></a>
             </li>
         </ul>
 
@@ -36,10 +33,6 @@
         justify-content: center;
         flex-direction: column;
         width: 100%;
-    }
-    footer img {
-        margin-bottom: 1rem;
-        position: relative;
     }
 
     ul {

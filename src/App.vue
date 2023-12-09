@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return{
-      logo_src: "/public/img/icon-p.png",
+      logo_src: "./assets/icon.png",
       app_name: "Cadastre o Veículo",
     }
   }
@@ -58,7 +58,7 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    background: url('/public/img/background.jpg') top right, center no-repeat fixed ;
+    background: url('/src/assets/background.jpg') top right, center no-repeat fixed ;
     background-size: cover;
     opacity: .2;
       width: 100%;
