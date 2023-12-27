@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return{
-      logo_src: "/public/img/icon.png",
+      logo_src: "/public/icon.png",
       app_name: "Cadastre o Veículo",
     }
   }
