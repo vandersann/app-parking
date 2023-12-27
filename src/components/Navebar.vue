@@ -1,7 +1,7 @@
 <template>
     <nav>
         <router-link  to="/" id="logo-url">
-            <img :src="logo" :alt="alt">
+            <!-- <img :src="logo" :alt="alt"> -->
         </router-link>
         <router-link to="/">Home</router-link>
         <router-link to="/cadastro">Cadastro</router-link>
